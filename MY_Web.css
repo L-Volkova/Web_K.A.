@@ -1,0 +1,175 @@
+*, *::before, *::after {
+    box-sizing: border-box; margin: 0;
+}
+.text-custom-dark {
+    color: #383E30;
+}
+html {
+    scroll-behavior: smooth; /*поавный скрол*/
+}
+
+body {
+    background: #ead2c9d5;
+    font-family: "Comfortaa";}
+/* Навигаия верхних вкладок */
+.container-nav {
+    position: fixed; width: 100%;
+}
+/* Сброс стилей для списка, чтобы убрать маркеры и отступы */
+.container-nav ul {
+    list-style-type: none; /* Убираем маркеры */
+    margin: 0; /* Обнуляем внешний отступ */
+    padding: 0 20px; /* Обнуляем внутренний отступ */
+    display: flex; /* Делаем элементы списка гибкими и располагаем горизонтально */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    background: linear-gradient(
+        45deg,          /* Направление: под углом 45 градусов */
+        #fbb1963e 0%,     /*начинается сразу (0%) */
+        #43524289 40%,    /*начинается в 40% пути */
+        #383E30 130%); backdrop-filter: blur(1px);
+        box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2); 
+        max-height: 50px;
+        font-size: 15px;
+        backdrop-filter: blur(3px);
+}
+/* Стили для элементов списка */
+.container-nav ul li {
+    padding: 10px 7px; /* Задаём отступы для каждого элемента */   
+}
+
+/* Стили для ссылок внутри списка */
+.container-nav ul li a {
+   
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #ead2c9d5; /* Задаём цвет текста */
+    display: block; /* Делаем ссылки блочными элементами для лучшей области клика */
+}
+
+/* Стили для логотипа, чтобы он не сливался с меню */
+.container-nav ul li:first-child {
+    font-weight: bold; /* Делаем текст логотипа жирным */
+    margin-right:auto; /* Прижимаем логотип к левому краю, а остальное меню — к правому */
+    color:  #6B2C49;
+}
+
+/* Оформление при наведении */
+.container-nav ul li a:hover {
+    color: #6B2C49; /* Меняем цвет фона при наведении */
+}
+
+/* Заглавие */
+
+
+/* 1. Стили для внешнего контейнера */
+.container-head { 
+    /* Чтобы центрирование было видно, зададим высоту и фон */
+    display: flex;             /* Активируем Flexbox на внешнем контейнере */
+    justify-content: center;   /* Центрируем внутренний враппер по горизонтали */
+    align-items: center;       /* Центрируем внутренний враппер по вертикали */
+}
+/* 2. Стили для внутреннего враппера, управляющего расположением трех элементов */
+.content-wrapper-head {
+    display: flex;             /* Активируем Flexbox на враппере */
+    flex-direction: column;    /* Располагаем элементы вертикально (друг под другом) */
+    align-items: center;       /* Центрируем элементы внутри враппера по горизонтали */
+    width: 800px;
+    margin-top: 30px;
+    
+    /* Дополнительные стили для наглядности */
+    text-align: center; 
+    
+}
+/* 3. Базовые стили для дочерних элементов */
+h1 {
+    margin: 7vw 0 10px 0; /* Убираем стандартные отступы браузера */
+    font-size: 60px; 
+}
+h1 span {
+    color: #6B2C49; font-size: 57px;
+}
+p {
+    margin: 0 0 3vw 0;
+    font-size: 20px;
+}
+.start__button{
+    display: flex; 
+}
+.start__button a{   
+    margin: 40px auto; 
+    display: inline-block;
+    padding: 15px;
+    background-color: #6B2C49;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 230px; font-size: 14px;
+}
+.start__button a:hover{
+    background-color: #383E30;
+    color: #ead2c9d5 ;
+}
+
+                 /*  БЛОК  Мой план обучение */
+
+
+.plan {
+    display: flex;
+    flex-direction: column; /* выравнивает по вертикали внутри контейнера */
+    margin: 0 auto; 
+    max-width: 1300px; 
+    height: 300px;
+    color: #383E30; 
+}
+#plan{
+    
+    border-bottom: 4px solid #383E30; width: 330px; font-size: 30px;
+}
+@media (max-width: 900px) {
+    #plan {
+        margin: 0 auto;
+    }
+}
+.container_plan ul{ 
+    list-style-type: none; /* Убираем маркеры */
+    margin: 0; /* Обнуляем внешний отступ */
+    padding: 0; /* Обнуляем внутренний отступ */ 
+}
+.container_plan {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0px 10px;  font-family: "Jost";
+    gap: 15px;
+}
+
+.stage1, .stage2, .stage3{ 
+    width: 390px; 
+    height: 190px;
+    background: rgb(255, 252, 251);
+    font-size: 17px; color: #6B2C49;
+    padding: 15px; 
+}
+@media (max-width: 900px) {
+    .container_plan {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+    }
+}
+.stage1 li, .stage2 li, .stage3 li{ 
+    padding: 5px; 
+}
+.stage1 p, .stage2 p, .stage3 p {
+    margin: 0px;  font-size: 20px; color: #6B2C49;
+}
+.stage1 span, .stage2 span, .stage3 span {font-size: 17px;}
+
+
+.stage1 { 
+    border-top:6px solid #6B2C49;   border-radius:0.7vw;
+}
+.stage2 {
+    border-top:6px solid #383E30;   border-radius:0.7vw;
+}
+.stage3 {
+    border-top:6px solid #f5b7c1;   border-radius:0.7vw;
+}
